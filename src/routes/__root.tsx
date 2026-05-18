@@ -8,7 +8,7 @@ export const Route = createRootRoute({
     component: () => (
         <ThemeProvider>
             <Navbar />
-            <main>
+            <main className="h-full bg-gray-100 dark:bg-zinc-900">
                 <Outlet />
             </main>
             <TanStackRouterDevtools position="bottom-right" />
