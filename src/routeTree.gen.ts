@@ -14,82 +14,82 @@ import { Route as ProcessRouteImport } from './routes/process'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TablesRoute = TablesRouteImport.update({
-    id: '/tables',
-    path: '/tables',
-    getParentRoute: () => rootRouteImport,
+  id: '/tables',
+  path: '/tables',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ProcessRoute = ProcessRouteImport.update({
-    id: '/process',
-    path: '/process',
-    getParentRoute: () => rootRouteImport,
+  id: '/process',
+  path: '/process',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
-    id: '/',
-    path: '/',
-    getParentRoute: () => rootRouteImport,
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
-    '/': typeof IndexRoute
-    '/process': typeof ProcessRoute
-    '/tables': typeof TablesRoute
+  '/': typeof IndexRoute
+  '/process': typeof ProcessRoute
+  '/tables': typeof TablesRoute
 }
 export interface FileRoutesByTo {
-    '/': typeof IndexRoute
-    '/process': typeof ProcessRoute
-    '/tables': typeof TablesRoute
+  '/': typeof IndexRoute
+  '/process': typeof ProcessRoute
+  '/tables': typeof TablesRoute
 }
 export interface FileRoutesById {
-    __root__: typeof rootRouteImport
-    '/': typeof IndexRoute
-    '/process': typeof ProcessRoute
-    '/tables': typeof TablesRoute
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/process': typeof ProcessRoute
+  '/tables': typeof TablesRoute
 }
 export interface FileRouteTypes {
-    fileRoutesByFullPath: FileRoutesByFullPath
-    fullPaths: '/' | '/process' | '/tables'
-    fileRoutesByTo: FileRoutesByTo
-    to: '/' | '/process' | '/tables'
-    id: '__root__' | '/' | '/process' | '/tables'
-    fileRoutesById: FileRoutesById
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths: '/' | '/process' | '/tables'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/process' | '/tables'
+  id: '__root__' | '/' | '/process' | '/tables'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-    IndexRoute: typeof IndexRoute
-    ProcessRoute: typeof ProcessRoute
-    TablesRoute: typeof TablesRoute
+  IndexRoute: typeof IndexRoute
+  ProcessRoute: typeof ProcessRoute
+  TablesRoute: typeof TablesRoute
 }
 
 declare module '@tanstack/react-router' {
-    interface FileRoutesByPath {
-        '/tables': {
-            id: '/tables'
-            path: '/tables'
-            fullPath: '/tables'
-            preLoaderRoute: typeof TablesRouteImport
-            parentRoute: typeof rootRouteImport
-        }
-        '/process': {
-            id: '/process'
-            path: '/process'
-            fullPath: '/process'
-            preLoaderRoute: typeof ProcessRouteImport
-            parentRoute: typeof rootRouteImport
-        }
-        '/': {
-            id: '/'
-            path: '/'
-            fullPath: '/'
-            preLoaderRoute: typeof IndexRouteImport
-            parentRoute: typeof rootRouteImport
-        }
+  interface FileRoutesByPath {
+    '/tables': {
+      id: '/tables'
+      path: '/tables'
+      fullPath: '/tables'
+      preLoaderRoute: typeof TablesRouteImport
+      parentRoute: typeof rootRouteImport
     }
+    '/process': {
+      id: '/process'
+      path: '/process'
+      fullPath: '/process'
+      preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
-    IndexRoute: IndexRoute,
-    ProcessRoute: ProcessRoute,
-    TablesRoute: TablesRoute,
+  IndexRoute: IndexRoute,
+  ProcessRoute: ProcessRoute,
+  TablesRoute: TablesRoute,
 }
 export const routeTree = rootRouteImport
-    ._addFileChildren(rootRouteChildren)
-    ._addFileTypes<FileRouteTypes>()
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>()
