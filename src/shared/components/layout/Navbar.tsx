@@ -21,7 +21,7 @@ export default function Navbar() {
     const { showPopup, PopupComponent } = usePopup()
 
     return (
-        <nav className="sticky top-0 z-10 flex h-16 w-full items-center justify-between border-b border-slate-200 bg-white px-4 transition-colors md:px-6 dark:border-slate-800 dark:bg-slate-950">
+        <nav className="sticky top-0 z-10 flex h-16 w-full items-center justify-between border-b border-slate-200 bg-white px-4 transition-colors md:px-6 dark:border-slate-800 dark:bg-black">
             {PopupComponent}
             <div className="flex items-center md:hidden">
                 <button

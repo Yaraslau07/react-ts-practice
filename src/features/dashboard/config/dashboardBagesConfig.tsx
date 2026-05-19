@@ -41,3 +41,25 @@ export const DASHBOARD_BAGES_CONFIG = {
         ),
     },
 }
+
+export const DASHBOARD_BAGES_DATA: Array<{
+    variant: 'success' | 'pending' | 'error'
+    title: string
+    subtitle: string
+}> = [
+    {
+        variant: 'success',
+        title: 'Medicine #580',
+        subtitle: 'Awaiting results',
+    },
+    {
+        variant: 'pending',
+        title: '3 vaccines',
+        subtitle: 'On hold',
+    },
+    {
+        variant: 'error',
+        title: '15 products',
+        subtitle: 'Out of stocks',
+    },
+]

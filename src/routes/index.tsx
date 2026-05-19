@@ -1,7 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 import { DashboardBage } from '@/features/dashboard/components/DashboardBages'
+import DashboardCards from '@/features/dashboard/components/DashboardCards'
 import { MainChart } from '@/features/dashboard/components/MainChart'
+import { DASHBOARD_BAGES_DATA } from '@/features/dashboard/config/dashboardBagesConfig'
 
 export const Route = createFileRoute('/')({
     component: HomePage,
@@ -22,29 +24,22 @@ function HomePage() {
             <div className="flex w-full flex-col gap-8 xl:flex-row">
                 <div className="flex flex-1 flex-col gap-8 rounded-xl p-6">
                     <div className="tems-center flex flex-wrap items-center justify-around border-b border-slate-100 pb-6 dark:border-zinc-800">
-                        <DashboardBage
-                            variant="success"
-                            title="Medicine #580"
-                            subtitle="Awaiting results"
-                        />
-
-                        <DashboardBage
-                            variant="pending"
-                            title="3 vaccines"
-                            subtitle="On hold"
-                        />
-
-                        <DashboardBage
-                            variant="error"
-                            title="15 products"
-                            subtitle="Out of stock"
-                        />
+                        {DASHBOARD_BAGES_DATA.map((bage) => (
+                            <DashboardBage
+                                key={bage.variant}
+                                variant={bage.variant}
+                                title={bage.title}
+                                subtitle={bage.subtitle}
+                            />
+                        ))}
                     </div>
 
                     <MainChart />
                 </div>
 
-                <div className="grid w-full grid-cols-2 gap-6 xl:w-[45%]"></div>
+                <div className="w-full xl:w-[45%]">
+                    <DashboardCards />
+                </div>
             </div>
         </section>
     )
