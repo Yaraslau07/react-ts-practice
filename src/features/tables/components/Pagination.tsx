@@ -16,7 +16,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     if (totalPages < 2) return null
 
     return (
-        <div className="flex items-center justify-start gap-3 border-t border-neutral-200 py-5 pb-0 dark:border-neutral-800">
+        <div className="flex items-center justify-start gap-3 border-t border-neutral-200 pt-7 dark:border-neutral-800">
             <Button
                 variant={'outline'}
                 disabled={page <= 1}
