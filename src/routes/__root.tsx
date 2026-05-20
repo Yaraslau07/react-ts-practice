@@ -1,5 +1,6 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 
+import Error from '@/shared/components/error/Error'
 import Navbar from '@/shared/components/layout/Navbar'
 import ThemeProvider from '@/shared/providers/ThemeProvider'
 
@@ -19,10 +20,17 @@ export const Route = createRootRoute({
             </div>
         </ThemeProvider>
     ),
-    errorComponent: () => <div>kakashka</div>,
+    errorComponent: ({ error, reset }) => (
+        <div className="flex min-h-[calc(100vh-9rem)] items-center justify-center p-4">
+            <Error error={error} reset={reset} />
+        </div>
+    ),
     notFoundComponent: () => (
-        <div className="w-full p-7">
-            <p className="text-amber-900">A ezze zaebal</p>
+        <div className="flex min-h-[calc(100vh-9rem)] items-center justify-center p-4">
+            <Error
+                title="404 - not found"
+                message="The page u trynna access does not exist"
+            />
         </div>
     ),
 })

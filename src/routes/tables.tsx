@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import Pagination from '@/features/tables/components/Pagination'
 import TableComponent from '@/features/tables/components/Table'
 
 type TablesSearch = {
@@ -30,7 +29,6 @@ function TablesPage() {
             <main>
                 <TableComponent />
             </main>
-            <Pagination totalPages={6} />
         </section>
     )
 }

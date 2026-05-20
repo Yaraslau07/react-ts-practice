@@ -2,6 +2,8 @@ import { useQuery } from '@tanstack/react-query'
 import { getRouteApi } from '@tanstack/react-router'
 import { Check, X } from 'lucide-react'
 
+import Error from '@/shared/components/error/Error'
+import Loading from '@/shared/components/loading/Loading'
 import {
     Table,
     TableBody,
@@ -12,6 +14,7 @@ import {
 } from '@/shared/components/ui/table'
 
 import { getMeditians } from '../api/getMeditians'
+import Pagination from './Pagination'
 
 const route = getRouteApi('/tables')
 
@@ -23,9 +26,9 @@ export default function TableComponent() {
         queryFn: () => getMeditians(page),
     })
 
-    if (isLoading) return <div>Loading...</div>
+    if (isLoading) return <Loading />
 
-    if (isError) return <div>Error</div>
+    if (isError) return <Error />
 
     return (
         <section>
@@ -267,6 +270,7 @@ export default function TableComponent() {
                     <div>No medications found.</div>
                 )}
             </div>
+            <Pagination totalPages={6} />
         </section>
     )
 }
