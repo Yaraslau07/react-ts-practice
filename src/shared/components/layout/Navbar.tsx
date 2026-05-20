@@ -89,7 +89,7 @@ export default function Navbar() {
 
                 <div className="ml-2 h-8 w-8 shrink-0 overflow-hidden rounded-full border border-slate-300 bg-slate-200 dark:border-slate-700 dark:bg-slate-800">
                     <img
-                        src="https://i.pravatar.cc/150?u=143"
+                        src="https://i.pravatar.cc/60?u=143"
                         alt="Profile"
                         className="h-full w-full object-cover"
                     />
