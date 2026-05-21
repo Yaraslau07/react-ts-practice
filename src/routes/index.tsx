@@ -6,6 +6,18 @@ import { MainChart } from '@/features/dashboard/components/MainChart'
 import { DASHBOARD_BAGES_DATA } from '@/features/dashboard/config/dashboardBagesConfig'
 
 export const Route = createFileRoute('/')({
+    head: () => ({
+        meta: [
+            {
+                title: 'Testing Dashboard Overview | Pharmaceutical Company',
+            },
+            {
+                name: 'description',
+                content:
+                    'Monitor testing processes, drug approval rates, and clinical trial analytics in real-time. Uncover insights into your testing operations.',
+            },
+        ],
+    }),
     component: HomePage,
 })
 

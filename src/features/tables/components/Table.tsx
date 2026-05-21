@@ -36,25 +36,25 @@ export default function TableComponent() {
                 <Table className="w-full">
                     <TableHeader>
                         <TableRow className="border-b bg-gray-50/50 dark:border-neutral-800 dark:bg-neutral-900/50">
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 NAME
                             </TableHead>
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 LOCATION
                             </TableHead>
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 START DATE
                             </TableHead>
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 END DATE
                             </TableHead>
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 SUCCESS REACTION
                             </TableHead>
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 PROCESS
                             </TableHead>
-                            <TableHead className="font-semibold text-gray-600 dark:text-neutral-400">
+                            <TableHead className="font-semibold text-gray-700 dark:text-neutral-300">
                                 STATUS
                             </TableHead>
                         </TableRow>
@@ -70,13 +70,13 @@ export default function TableComponent() {
                                         {medicine.name}
                                     </TableCell>
 
-                                    <TableCell className="text-gray-600 dark:text-neutral-300">
+                                    <TableCell className="text-gray-700 dark:text-neutral-300">
                                         {medicine.location}
                                     </TableCell>
-                                    <TableCell className="text-gray-600 dark:text-neutral-300">
+                                    <TableCell className="text-gray-700 dark:text-neutral-300">
                                         {medicine.startDate}
                                     </TableCell>
-                                    <TableCell className="text-gray-600 dark:text-neutral-300">
+                                    <TableCell className="text-gray-700 dark:text-neutral-300">
                                         {medicine.endDate}
                                     </TableCell>
 
@@ -100,7 +100,7 @@ export default function TableComponent() {
 
                                     <TableCell>
                                         <div className="flex w-32 flex-col gap-1.5">
-                                            <span className="text-xs font-medium text-gray-500 dark:text-neutral-400">
+                                            <span className="text-xs font-medium text-gray-700 dark:text-neutral-300">
                                                 {medicine.process} /{' '}
                                                 {medicine.total}
                                             </span>
@@ -149,7 +149,7 @@ export default function TableComponent() {
                             <TableRow>
                                 <TableCell
                                     colSpan={7}
-                                    className="py-6 text-center text-gray-500 dark:text-neutral-400"
+                                    className="py-6 text-center text-gray-700 dark:text-neutral-300"
                                 >
                                     No medications found.
                                 </TableCell>
@@ -170,7 +170,7 @@ export default function TableComponent() {
                                     <h3 className="text-lg font-bold tracking-tight text-blue-600 dark:text-blue-400">
                                         {record.name}
                                     </h3>
-                                    <p className="mt-0.5 text-sm text-gray-500 dark:text-neutral-400">
+                                    <p className="mt-0.5 text-sm text-gray-700 dark:text-neutral-300">
                                         {record.location}
                                     </p>
                                 </div>
@@ -195,7 +195,7 @@ export default function TableComponent() {
 
                             <div className="grid grid-cols-2 gap-3 rounded-lg border border-gray-100 bg-gray-50 p-3 dark:border-neutral-800 dark:bg-neutral-800/50">
                                 <div>
-                                    <p className="mb-1 text-xs font-bold text-gray-400 dark:text-neutral-500">
+                                    <p className="mb-1 text-xs font-bold text-gray-700 dark:text-neutral-300">
                                         START DATE
                                     </p>
                                     <p className="text-sm font-medium text-gray-700 dark:text-neutral-300">
@@ -215,7 +215,7 @@ export default function TableComponent() {
                             <div className="mt-1 flex flex-col gap-4">
                                 <div>
                                     <div className="mb-1.5 flex items-end justify-between">
-                                        <p className="text-xs font-bold text-gray-500 dark:text-neutral-400">
+                                        <p className="text-xs font-bold text-gray-700 dark:text-neutral-300">
                                             PROCESS
                                         </p>
                                         <span className="text-xs font-medium text-gray-600 dark:text-neutral-300">
@@ -233,7 +233,7 @@ export default function TableComponent() {
                                 </div>
 
                                 <div>
-                                    <p className="mb-2 text-xs font-bold text-gray-500 dark:text-neutral-400">
+                                    <p className="mb-2 text-xs font-bold text-gray-700 dark:text-neutral-300">
                                         STATUS
                                     </p>
                                     <div className="flex w-full items-center gap-1">

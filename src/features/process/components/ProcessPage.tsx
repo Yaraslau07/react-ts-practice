@@ -117,7 +117,7 @@ export default function ProcessPageComponent() {
                         src={AmphImg}
                         alt="amphetamine"
                     ></img>
-                    <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                    <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
                         DOZ
                     </p>
                 </div>
