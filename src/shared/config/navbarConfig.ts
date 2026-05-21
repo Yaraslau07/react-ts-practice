@@ -26,6 +26,11 @@ export const NAV_ITEMS = [
 ]
 
 export const ACTION_BUTTONS = [
-    { id: 'notifications', label: 'Notifications', icon: Bell },
-    { id: 'apps', label: 'Apps', icon: Grid },
+    {
+        id: 'notifications',
+        label: 'Notifications',
+        icon: Bell,
+        'aria-label': 'notifications',
+    },
+    { id: 'apps', label: 'Apps', icon: Grid, 'aria-label': 'apps' },
 ]
