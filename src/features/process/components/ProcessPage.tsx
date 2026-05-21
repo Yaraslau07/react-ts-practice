@@ -7,9 +7,11 @@ import { Button } from '@/shared/components/ui/button'
 
 import ZovodMap from './Map'
 import MapsOpenModel from './MapsOpenModel'
+import StartProcess from './StartProcess'
 
 export default function ProcessPageComponent() {
     const [mapsModelOpened, setMapsModelOpened] = useState<boolean>(false)
+    const [processStarted, setProcessStarted] = useState(false)
 
     return (
         <section className="mx-auto flex w-full flex-col p-4 md:flex-row md:p-6 lg:p-8">
@@ -55,7 +57,10 @@ export default function ProcessPageComponent() {
                     </div>
 
                     <div className="flex flex-col gap-4 sm:flex-row">
-                        <Button className="h-12 flex-1 rounded-xl bg-blue-600 py-3 text-base font-medium text-white shadow-none hover:bg-blue-700 md:py-0">
+                        <Button
+                            onClick={() => setProcessStarted(true)}
+                            className="h-12 flex-1 rounded-xl bg-blue-600 py-3 text-base font-medium text-white shadow-none hover:bg-blue-700 md:py-0"
+                        >
                             Start Process
                         </Button>
                         <Button
@@ -72,6 +77,11 @@ export default function ProcessPageComponent() {
                             </a>
                         </Button>
                     </div>
+                    {processStarted && (
+                        <StartProcess
+                            onClose={() => setProcessStarted(false)}
+                        />
+                    )}
                 </div>
 
                 <div className="flex flex-col px-1 md:px-2">
