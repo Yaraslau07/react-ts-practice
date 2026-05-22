@@ -24,6 +24,7 @@ export default function TableComponent() {
     const { data, isLoading, isError } = useQuery({
         queryKey: ['meditians', page],
         queryFn: () => getMeditians(page),
+        staleTime: 1000 * 60 * 60 * 24,
     })
 
     if (isLoading) return <Loading />
