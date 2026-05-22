@@ -40,5 +40,5 @@ export function usePopup() {
         />
     ) : null
 
-    return { showPopup, hidePopup, PopupComponent }
+    return { showPopup, PopupComponent }
 }
