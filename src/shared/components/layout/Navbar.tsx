@@ -108,9 +108,9 @@ export default function Navbar() {
             <div
                 className={`absolute top-16 left-0 z-50 flex w-full flex-col overflow-hidden border-b border-slate-200 bg-white shadow-lg transition-all duration-300 ease-in-out md:hidden dark:border-slate-800 dark:bg-slate-950 ${isNavbarOpened ? 'max-h-96 py-4 opacity-100' : 'pointer-events-none max-h-0 border-transparent py-0 opacity-0'} `}
             >
-                <div className="flex flex-col gap-4 px-6">
-                    <NavigationMenu className="w-full max-w-full justify-start">
-                        <NavigationMenuList className="w-full flex-col items-stretch gap-2 space-x-0">
+                <div className="flex w-full flex-col gap-4 px-6">
+                    <NavigationMenu className="w-full max-w-full [&>div]:!w-full">
+                        <NavigationMenuList className="w-full max-w-full flex-col items-stretch gap-2 space-x-0">
                             {NAV_ITEMS.map((item) => (
                                 <NavigationMenuItem
                                     key={item.id}
@@ -136,9 +136,13 @@ export default function Navbar() {
                                             </Link>
                                         ) : (
                                             <button
-                                                onClick={() =>
+                                                onClick={() => {
                                                     setIsNavbarOpened(false)
-                                                }
+                                                    showPopup(
+                                                        'No such page available yet',
+                                                        'error'
+                                                    )
+                                                }}
                                                 className="flex items-center gap-3"
                                             >
                                                 <item.icon
@@ -158,6 +162,10 @@ export default function Navbar() {
                         {ACTION_BUTTONS.map((btn) => (
                             <button
                                 key={btn.id}
+                                onClick={() => {
+                                    setIsNavbarOpened(false)
+                                    showPopup('Not yet available', 'error')
+                                }}
                                 className="flex w-full items-center gap-3 rounded-md px-4 py-3 text-base font-medium text-slate-600 transition-all duration-200 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800/80 dark:hover:text-white"
                             >
                                 <btn.icon size={20} /> {btn.label}
