@@ -12,6 +12,7 @@ The app is build with:
 - Shadcn UI
 - lucide-react for icons
 - pegion-maps for map
+- husky for pre-commit/push hooks
 - FBD (Feature-Based Design) architecture
 
 ## Project Overview
@@ -76,8 +77,6 @@ App is deployed through Vercel on https://react-ts-practice-mauve.vercel.app/
 ```text
 # Project Structure
 
-```
-
 ├── public
 │ └── favicon.png
 ├── src
@@ -125,8 +124,6 @@ App is deployed through Vercel on https://react-ts-practice-mauve.vercel.app/
 ├── tsconfig.node.json
 ├── vercel.json --- Added so as vercel could correctly handle client side routing
 └── vite.config.ts
-
-```
 
 ```
 
