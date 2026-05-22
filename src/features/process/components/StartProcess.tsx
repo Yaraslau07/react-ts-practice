@@ -106,7 +106,7 @@ export default function StartProcess({ onClose }: { onClose: () => void }) {
     }
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity">
+        <div className="fixed inset-0 z-30 flex h-auto items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity">
             <div className="relative flex h-125 w-full max-w-md flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-900">
                 <div className="flex items-center justify-between border-b border-gray-100 p-4 dark:border-gray-800">
                     <h3 className="font-semibold text-gray-800 dark:text-gray-200">

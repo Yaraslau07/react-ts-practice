@@ -35,7 +35,7 @@ function HomePage() {
 
             <div className="flex w-full flex-col gap-8 xl:flex-row">
                 <div className="flex flex-1 flex-col gap-8 rounded-xl p-6">
-                    <div className="tems-center flex flex-wrap items-center justify-around border-b border-slate-100 pb-6 dark:border-zinc-800">
+                    <div className="tems-center grid grid-cols-1 items-center justify-around border-b border-slate-100 pb-6 md:grid-cols-3 dark:border-zinc-800">
                         {DASHBOARD_BAGES_DATA.map((bage) => (
                             <DashboardBage
                                 key={bage.variant}
